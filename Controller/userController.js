@@ -14,6 +14,7 @@ const createToken = (userId) => {
 
 module.exports.Register = async (req, res, next) => {
   const { username, email, password } = req.body;
+  console.log(`${username} ** ${email} ** ${password}`);
 
   try {
     const emailExists = await userModel.findOne({ email });
